@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "algorithm": "cpp",
+        "fstream": "cpp",
+        "iosfwd": "cpp",
+        "istream": "cpp",
+        "list": "cpp",
+        "ostream": "cpp",
+        "sstream": "cpp",
+        "streambuf": "cpp",
+        "vector": "cpp",
+        "xhash": "cpp",
+        "xlocbuf": "cpp",
+        "xstring": "cpp"
+    }
+}

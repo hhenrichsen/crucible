@@ -5,7 +5,7 @@ entt/3.7.1
 [options]
 sfml:graphics=True
 sfml:window=True
-sfml:audio=False
+sfml:audio=True
 sfml:network=False
 
 [generators]

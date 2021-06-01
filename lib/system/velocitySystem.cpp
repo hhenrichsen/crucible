@@ -4,12 +4,12 @@
 #include "../component/velocity.hpp"
 
 void VelocitySystem::update(double dt) {
-    auto view = this->registry->view<const Velocity, Position>();
-    for (auto ent : view) {
-        auto pos = view.get<Position>(ent);
-        auto velocity = view.get<const Velocity>(ent);
+    auto view = this->registry->view<Position, Velocity>();
+    for (const entt::entity entity : view) {
+        Position& position = view.get<Position>(entity);
+        Velocity& velocity = view.get<Velocity>(entity);
 
-        pos.x += velocity.dx * dt;
-        pos.y += velocity.dy * dt;
+        position.x += velocity.dx * dt;
+        position.y += velocity.dy * dt;
     }
 }

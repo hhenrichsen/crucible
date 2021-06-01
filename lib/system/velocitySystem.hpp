@@ -5,9 +5,9 @@
 
 #include "baseSystem.hpp"
 
-class VelocitySystem : BaseSystem {
+class VelocitySystem : public BaseSystem {
    public:
-    VelocitySystem(const entt::registry& reg) : BaseSystem(reg){};
+    VelocitySystem(entt::registry& reg) : BaseSystem(reg){};
     void update(double dt);
 };
 

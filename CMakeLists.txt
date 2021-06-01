@@ -17,12 +17,12 @@ include_directories(include)
 
 conan_basic_setup()
 
-file(GLOB LIB_SRC
+file(GLOB_RECURSE LIB_SRC
     lib/*.hpp
     lib/*.cpp
 )
 
-file(GLOB APP_SRC
+file(GLOB_RECURSE APP_SRC
     src/*.hpp
     src/*.cpp
 )

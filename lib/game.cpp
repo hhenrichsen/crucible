@@ -18,6 +18,4 @@ void Game::initRegistry() {}
 
 void Game::update(double dt) { this->updateSystems(dt); }
 
-void Game::addSystem(BaseSystem* system) { this->systems.emplace_back(system); }
-
 const bool Game::isRunning() const { return this->running; }

@@ -2,6 +2,7 @@
 #define CRUCIBLE_LIB_GAME_HPP_
 
 #include <entt/entt.hpp>
+#include <functional>
 #include <vector>
 
 #include "system/baseSystem.hpp"
@@ -23,8 +24,14 @@ class Game {
 
     void init();
     void update(double dt);
-    void addSystem(BaseSystem* system);
     const bool isRunning() const;
+    template <class T, class... Args>
+    void addSystem(Args&&... args) {
+        static_assert(std::is_base_of<BaseSystem, T>::value,
+                      "Trying to add a non-system.");
+        this->systems.emplace_back(
+            new T(registry, std::forward<Args>(args)...));
+    }
 };
 
 #endif  // CRUCIBLE_LIB_GAME_HPP_

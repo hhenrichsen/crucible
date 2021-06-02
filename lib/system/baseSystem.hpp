@@ -8,7 +8,7 @@ class BaseSystem {
     entt::registry* registry = nullptr;
 
    public:
-    BaseSystem(entt::registry& reg) : registry(&reg){};
+    BaseSystem(entt::registry* reg) : registry(reg){};
     virtual void update(double dt) = 0;
 };
 

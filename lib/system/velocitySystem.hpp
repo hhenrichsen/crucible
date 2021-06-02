@@ -7,7 +7,7 @@
 
 class VelocitySystem : public BaseSystem {
    public:
-    VelocitySystem(entt::registry& reg) : BaseSystem(reg){};
+    VelocitySystem(entt::registry* reg) : BaseSystem(reg){};
     void update(double dt);
 };
 
